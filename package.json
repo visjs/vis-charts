@@ -1,6 +1,6 @@
 {
   "name": "vis-util",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "utilitie collection for visjs",
   "homepage": "https://github.com/visjs/vis-util",
   "license": "(Apache-2.0 OR MIT)",
