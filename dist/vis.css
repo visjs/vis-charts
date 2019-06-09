@@ -790,6 +790,10 @@ div.vis-network div.vis-navigation div.vis-button.vis-zoomExtends {
   z-index: 1;
 }
 
+.vis-custom-time.disabled {
+  cursor: inherit;
+}
+
 .vis-panel.vis-background.vis-horizontal .vis-grid.vis-horizontal {
   position: absolute;
   width: 100%;
@@ -1178,6 +1182,12 @@ div.vis-network div.vis-navigation div.vis-button.vis-zoomExtends {
   cursor: pointer;
 }
 
+.vis-labelset .vis-label.vertical {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .vis-labelset .vis-label:last-child {
   border-bottom: none;
 }
@@ -1189,6 +1199,17 @@ div.vis-network div.vis-navigation div.vis-button.vis-zoomExtends {
 
 .vis-labelset .vis-label .vis-inner.vis-hidden {
   padding: 0;
+}
+
+.vis-labelset .vis-label.vertical .vis-inner {
+  padding-top: 0;
+  padding-bottom: 0;
+  white-space: nowrap;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 
 .vis-panel {
@@ -1439,10 +1460,16 @@ div.vis-network div.vis-navigation div.vis-button.vis-zoomExtends {
 .vis-timeline {
   position: relative;
   border: 1px solid #bfbfbf;
-
   overflow: hidden;
   padding: 0;
   margin: 0;
-
   box-sizing: border-box;
+}
+
+.vis-loading-screen {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
