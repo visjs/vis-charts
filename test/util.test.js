@@ -1,7 +1,9 @@
 var jsdom_global = require('jsdom-global');
 var assert = require('assert');
+
 var util = require('../lib/util');
-var moment = require('../lib//module/moment');
+var moment = require('../lib/moment');
+
 var ASPDateRegex = /^\/?Date\((\-?\d+)/i;
 
 describe('util', function () {

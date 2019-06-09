@@ -1,0 +1,30 @@
+{
+  "name": "vis-util",
+  "version": "1.0.0",
+  "description": "utilitie collection for visjs",
+  "homepage": "https://github.com/visjs/vis-util",
+  "license": "(Apache-2.0 OR MIT)",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/visjs/vis-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/visjs/vis-util/issues"
+  },
+  "author": "mojoaxel <dev@wunschik.net>",
+  "keywords": [],
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "vis-uuid": "^1.0.2"
+  },
+  "devDependencies": {
+    "assert": "^2.0.0",
+    "jsdom": "^15.1.1",
+    "jsdom-global": "^3.0.2",
+    "mocha": "^3.4.2",
+    "moment": "^2.21.0"
+  }
+}
