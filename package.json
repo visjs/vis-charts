@@ -1,6 +1,6 @@
 {
   "name": "vis-util",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "utilitie collection for visjs",
   "main": "dist/umd.js",
   "module": "dist/esm.js",
