@@ -1,7 +1,6 @@
 var fs = require('fs');
 var async = require('async');
 var gulp = require('gulp');
-var eslint = require('gulp-eslint');
 var gutil = require('gulp-util');
 var concat = require('gulp-concat');
 var cleanCSS = require('gulp-clean-css');
@@ -229,21 +228,6 @@ else {
 gulp.task('watch', watchTasks, function () {
   gulp.watch(['index.js', 'lib/**/*'], watchTasks);
 });
-
-
-//
-// Linting usage:
-//
-//    > gulp lint
-// or > npm run lint
-//
-gulp.task('lint', function () {
-  return gulp.src(['lib/**/*.js', '!node_modules/**'])
-    .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError());
-});
-
 
 // Generate the documentation files
 gulp.task('docs', function(cb) {
