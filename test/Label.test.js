@@ -9,13 +9,13 @@
  *   Currently, only "size[px] name color" is valid, always 3 items with this exact spacing.
  *   All other combinations should either be rejected as error or handled gracefully.
  */
-var assert = require('assert');
-var Label = require('../lib/network/modules/components/shared/Label').default;
-var NodesHandler = require('../lib/network/modules/NodesHandler').default;
-var util = require('../lib/util');
-var canvasMockify = require('./canvas-mock');
-var DataSet = require('../lib/DataSet');
-var Network = require('../lib/network/Network');
+import assert from 'assert';
+import Label from '../lib/network/modules/components/shared/Label';
+import NodesHandler from '../lib/network/modules/NodesHandler';
+import util from '../lib/util';
+import canvasMockify from './canvas-mock';
+import DataSet from '../lib/DataSet';
+import Network from '../lib/network/Network';
 
 
 /**************************************************************
