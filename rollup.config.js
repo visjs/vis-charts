@@ -25,7 +25,7 @@ export default [
     output: {
       file: 'dist/umd.js',
       format: 'umd',
-      name: 'visUUID',
+      name: 'visUtil',
     },
     plugins: [resolve(resolveConfig), commonjs(), babel(babelConfingBase)],
   },
