@@ -67,6 +67,7 @@
     "rimraf": "^2.6.3",
     "rollup": "^1.16.7",
     "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.0.1",
     "rollup-plugin-node-resolve": "^5.2.0",
     "typedoc": "^0.14.2",
     "typescript": "^3.5.3"
