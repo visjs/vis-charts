@@ -1,38 +1,69 @@
 {
   "name": "vis-util",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "utilitie collection for visjs",
   "main": "dist/umd.js",
   "module": "dist/esm.js",
-  "homepage": "https://github.com/visjs/vis-util",
-  "license": "(Apache-2.0 OR MIT)",
+  "types": "dist/types/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git://github.com/visjs/vis-utils.git"
+    "url": "git+https://github.com/visjs/vis-utils.git"
   },
+  "author": "mojoaxel <dev@wunschik.net>",
+  "contributors": [
+    "Thomaash <tom.vycital@gmail.com>"
+  ],
+  "scripts": {
+    "build": "npm run build:types && npm run build:code && npm run build:docs",
+    "build:code": "rollup -c rollup.prod.config.js",
+    "build:docs": "typedoc ./src",
+    "build:types": "tsc -p tsconfig.types.json",
+    "clean": "rimraf '{docs,dist}/*'",
+    "fix": "npm run lint -- --fix",
+    "lint": "eslint '{src,test}/**/*.{m,}{j,t}s{x,}'",
+    "test": "BABEL_ENV=test mocha -r ./babel.mocha.js 'test/**/*.test.{j,t}s'",
+    "type-check": "tsc --noemit"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "keywords": [
+    "util",
+    "vis",
+    "vis.js"
+  ],
+  "license": "(Apache-2.0 OR MIT)",
   "bugs": {
     "url": "https://github.com/visjs/vis-util/issues"
   },
-  "author": "mojoaxel <dev@wunschik.net>",
-  "keywords": [],
-  "scripts": {
-    "build": "npm run build:code",
-    "build:code": "rollup -c rollup.prod.config.js",
-    "clean": "rimraf '{docs,dist}/*'",
-    "test": "mocha"
-  },
+  "homepage": "https://github.com/visjs/vis-util",
+  "files": [
+    "dist",
+    "LICENSE*"
+  ],
   "dependencies": {
+    "moment": "^2.24.0",
     "vis-uuid": "^1.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.5.4",
     "@babel/preset-env": "^7.5.4",
     "@babel/preset-typescript": "^7.3.3",
+    "@babel/register": "^7.4.4",
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.0.12",
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
+    "@typescript-eslint/parser": "^1.11.0",
     "assert": "^2.0.0",
+    "chai": "^4.2.0",
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
     "jsdom": "^15.1.1",
     "jsdom-global": "^3.0.2",
-    "mocha": "^3.4.2",
-    "moment": "^2.24.0",
+    "mocha": "^6.1.4",
+    "prettier": "^1.18.2",
     "rimraf": "^2.6.3",
     "rollup": "^1.16.7",
     "rollup-plugin-babel": "^4.3.3",
