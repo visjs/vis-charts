@@ -1,11 +1,11 @@
+var util = require('vis-util');
+
 // utils
-exports.util = require('vis-util');
+exports.util = util;
 exports.DOMutil = require('./lib/DOMutil');
 
 // data
-exports.DataSet = require('./lib/DataSet');
-exports.DataView = require('./lib/DataView');
-exports.Queue = require('./lib/Queue');
+util.extend(exports, require('vis-data'));
 
 // Graph3d
 exports.Graph3d = require('./lib/graph3d/Graph3d');
