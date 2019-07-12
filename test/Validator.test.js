@@ -8,7 +8,7 @@
  */
 var assert = require('assert');
 var stdout = require('test-console').stdout;
-var Validator = require("../lib/shared/Validator").default;
+var Validator = require("../lib/shared/Validator").Validator;
 
 // Copied from lib/network/options.js
 let string = 'string';
