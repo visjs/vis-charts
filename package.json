@@ -9,9 +9,20 @@
     "type": "git",
     "url": "git+https://github.com/visjs/vis-utils.git"
   },
-  "author": "mojoaxel <dev@wunschik.net>",
+  "author": "Alex de Mulder <alexdemulder@gmail.com>",
   "contributors": [
-    "Thomaash <tom.vycital@gmail.com>"
+    "Alex de Mulder <alexdemulder@gmail.com>",
+    "jos <wjosdejong@gmail.com>",
+    "Alexander Wunschik <alex@wunschik.net>",
+    "Tomáš Vyčítal <tom.vycital@gmail.com>",
+    "wimrijnders <wrijnders@gmail.com>",
+    "yotamberk <yotamberk@gmail.com>",
+    "David Anderson <eymiha@gmail.com>",
+    "Ludo Stellingwerff <ludo@almende.org>",
+    "Ben Morton <ben.morton91@gmail.com>",
+    "Greg Kubisa <gkubisa@gmail.com>",
+    "Kelvin Del Monte <kdelmonten@gmail.com>",
+    "Zuko Mgwili <zuko.mgwili@chillisoft.co.za>"
   ],
   "scripts": {
     "build": "npm run build:types && npm run build:code && npm run build:docs",
@@ -22,7 +33,9 @@
     "fix": "npm run lint -- --fix",
     "lint": "eslint '{src,test}/**/*.{m,}{j,t}s{x,}'",
     "test": "BABEL_ENV=test mocha -r ./babel.mocha.js 'test/**/*.test.{j,t}s'",
-    "type-check": "tsc --noemit"
+    "type-check": "tsc --noemit",
+    "contributors:update": "git-authors-cli",
+    "preparepublish": "npm run contributors:update"
   },
   "engines": {
     "node": ">=8"
@@ -60,6 +73,7 @@
     "eslint": "^6.0.1",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-prettier": "^3.1.0",
+    "git-authors-cli": "^1.0.18",
     "jsdom": "^15.1.1",
     "jsdom-global": "^3.0.2",
     "mocha": "^6.1.4",
