@@ -1,11 +1,14 @@
 import resolve from 'rollup-plugin-node-resolve'
 import babel from 'rollup-plugin-babel'
 
+// This is necessary for Moment to work.
+import commonjs from 'rollup-plugin-commonjs'
+
 const babelConfingBase = {
-  extensions: ['.mts', '.ts', '.tsx', '.mjs', '.js', '.jsx'],
+  extensions: ['.ts', '.js'],
 }
 const resolveConfig = {
-  extensions: [...babelConfingBase.extensions, '.json', '.node'],
+  extensions: [...babelConfingBase.extensions, '.json'],
 }
 
 export default [
@@ -15,7 +18,7 @@ export default [
       file: 'dist/esm.js',
       format: 'esm',
     },
-    plugins: [resolve(resolveConfig), babel(babelConfingBase)],
+    plugins: [resolve(resolveConfig), commonjs(), babel(babelConfingBase)],
   },
   {
     input: 'src/index.ts',
@@ -24,6 +27,6 @@ export default [
       format: 'umd',
       name: 'vis',
     },
-    plugins: [resolve(resolveConfig), babel(babelConfingBase)],
-  }
+    plugins: [resolve(resolveConfig), commonjs(), babel(babelConfingBase)],
+  },
 ]
