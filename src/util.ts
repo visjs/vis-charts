@@ -148,7 +148,7 @@ export function isDate(value: unknown): value is Date | string {
 
 /**
  * Test whether given object is a Moment date.
- * @TODO: This is basically a workaround, if Moment was imported property it wouldn't necessary.
+ * @TODO: This is basically a workaround, if Moment was imported property it wouldn't necessary as moment.isMoment is a TS type guard.
  *
  * @param value - Input value of unknown type.
  *
@@ -217,6 +217,7 @@ export function fillIfDefined<T extends object>(a: T, b: Partial<T>, allowDeleti
  *
  * @param target - The target object to copy to.
  * @param source - The source object from which to copy properties.
+ *
  * @return The target object.
  */
 export const extend = Object.assign
@@ -233,7 +234,6 @@ export const extend = Object.assign
  */
 export function selectiveExtend(props: string[], a: any, ...others: any[]): any {
   // @TODO: better solution?
-  // eslint-disable-line no-unused-vars
   if (!Array.isArray(props)) {
     throw new Error('Array with property names expected as first argument')
   }
@@ -464,7 +464,7 @@ export function convert(object: unknown, type: Types | null): any {
       } else {
         // @TODO: I don't think that Number and String constructors are a good idea.
         // This could also fail if the object doesn't have valueOf method or if it's redefined.
-        // For example: Object.create(null)
+        // For example: Object.create(null) or { valueOf: 7 }.
         return Number((object as any).valueOf())
       }
     case 'string':
@@ -1000,7 +1000,7 @@ export const option = {
   /**
    * Convert a value into a DOM Element.
    *
-   * @param value - Value to be converted intoDOM Element, a function will be executed as (() => unknown).
+   * @param value - Value to be converted into DOM Element, a function will be executed as (() => unknown).
    * @param defaultValue - If the value or the return value of the function == null then this will be returned.
    *
    * @returns The DOM Element, if none then the default value, if none then null.
