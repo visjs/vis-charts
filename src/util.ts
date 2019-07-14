@@ -1652,6 +1652,17 @@ export function mergeOptions(mergeTarget: any, options: any, option: string, glo
   mergeTarget[option].enabled = enabled
 }
 
+export function binarySearchCustom<O extends object, K1 extends keyof O, K2 extends keyof O[K1]>(
+  orderedItems: O[],
+  comparator: (v: O[K1][K2]) => -1 | 0 | 1,
+  field: K1,
+  field2: K2
+): number
+export function binarySearchCustom<O extends object, K1 extends keyof O>(
+  orderedItems: O[],
+  comparator: (v: O[K1]) => -1 | 0 | 1,
+  field: K1
+): number
 /**
  * This function does a binary search for a visible item in a sorted list. If we find a visible item, the code that uses
  * this function will then iterate in both directions over this sorted list to find all visible items.
@@ -1663,11 +1674,11 @@ export function mergeOptions(mergeTarget: any, options: any, option: string, glo
  *
  * @returns Index of the found item or -1 if nothing was found.
  */
-export function binarySearchCustom<T, F1 extends string, F2 extends string | undefined = undefined>(
-  orderedItems: F2 extends string ? { [K in F1]: { [K in F2]: T } }[] : { [K in F1]: T }[],
-  comparator: (v: T) => -1 | 0 | 1,
-  field: F1,
-  field2?: F2
+export function binarySearchCustom(
+  orderedItems: any[],
+  comparator: (v: unknown) => -1 | 0 | 1,
+  field: string,
+  field2?: string
 ): number {
   const maxIterations = 10000
   let iteration = 0
@@ -1678,8 +1689,7 @@ export function binarySearchCustom<T, F1 extends string, F2 extends string | und
     const middle = Math.floor((low + high) / 2)
 
     const item = orderedItems[middle]
-    // @TODO: there could be a better solution to this
-    const value: T = field2 === undefined ? (item as any)[field] : (item as any)[field][field2]
+    const value = field2 === undefined ? item[field] : item[field][field2]
 
     const searchResult = comparator(value)
     if (searchResult == 0) {
