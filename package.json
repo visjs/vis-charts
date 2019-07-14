@@ -15,7 +15,7 @@
   ],
   "scripts": {
     "build": "npm run build:types && npm run build:code && npm run build:docs",
-    "build:code": "rollup -c rollup.prod.config.js",
+    "build:code": "rollup -c rollup.config.js",
     "build:docs": "typedoc ./src",
     "build:types": "tsc -p tsconfig.types.json",
     "clean": "rimraf '{docs,dist}/*'",
