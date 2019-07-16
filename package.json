@@ -64,7 +64,7 @@
     "watch-dev": "npm run watch-dev",
     "lint": "eslint '{src,test}/**/*.{m,}{j,t}s{x,}'",
     "clean": "rimraf 'dist/*'",
-    "postinstall": "opencollective postinstall"
+    "postinstall": "opencollective postinstall || exit 0"
   },
   "dependencies": {
     "emitter-component": "^1.1.1",
@@ -74,8 +74,7 @@
     "propagating-hammerjs": "^1.4.6",
     "timsort": "^0.3.0",
     "vis-data": "^6.0.0",
-    "vis-util": "^1.1.1",
-    "vis-uuid": "^1.1.1"
+    "vis-util": "^1.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.5.4",
