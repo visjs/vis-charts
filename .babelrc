@@ -8,6 +8,11 @@
     ],
     "@babel/preset-typescript"
   ],
+  "plugins": [
+    "@babel/proposal-class-properties",
+    "@babel/proposal-object-rest-spread",
+    "@babel/plugin-transform-runtime"
+  ],
   "env": {
     "test": {
       "presets": [
