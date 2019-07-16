@@ -1,23 +1,13 @@
-import commonjs from 'rollup-plugin-commonjs';
-import nodeResolve from 'rollup-plugin-node-resolve';
-import nodeBuiltins from 'rollup-plugin-node-builtins';
-import babel from 'rollup-plugin-babel';
-import banner from 'rollup-plugin-banner';
-import genHeader from './lib/header';
+import charts from './rollup.config.charts'
+import data from './rollup.config.data'
+import graph3D from './rollup.config.graph3d'
+import network from './rollup.config.network'
+import timelineGraph2D from './rollup.config.timeline-graph2d'
 
-export default [{
-	input: 'index.js',
-	output: {
-		file: 'dist/vis.js',
-		name: 'vis',
-		exports: 'default',
-		format: 'umd'
-	},
-	plugins: [
-		commonjs(),
-		nodeBuiltins(),
-		nodeResolve(),
-		babel(),
-		banner(genHeader())
-	]
-}]
+export default [
+	...charts,
+	...data,
+	...graph3D,
+	...network,
+	...timelineGraph2D,
+]
