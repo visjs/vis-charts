@@ -1,18 +1,36 @@
 {
-    "presets": [
-        ["@babel/preset-env", {
-            "targets": "> 0.1% or not dead"
-        }],
-        "@babel/preset-typescript"
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": "> 0.1% or not dead"
+      }
     ],
-    "env": {
-        "test": {
-            "presets": [
-                ["@babel/preset-env", {
-                    "targets": "maintained node versions"
-                }],
-                "@babel/preset-typescript"
-            ]
-        }
+    "@babel/preset-typescript"
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "targets": "maintained node versions"
+          }
+        ],
+        "@babel/preset-typescript"
+      ]
+    },
+    "test-cov": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "targets": "maintained node versions"
+          }
+        ],
+        "@babel/preset-typescript"
+      ],
+      "plugins": ["istanbul"]
     }
+  }
 }
