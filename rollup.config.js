@@ -6,6 +6,7 @@ import commonjs from 'rollup-plugin-commonjs'
 
 const babelConfingBase = {
   extensions: ['.ts', '.js'],
+  runtimeHelpers: true,
 }
 const resolveConfig = {
   extensions: [...babelConfingBase.extensions, '.json'],
@@ -23,6 +24,7 @@ export default [
   {
     input: 'src/index.ts',
     output: {
+      exports: 'named',
       file: 'dist/umd.js',
       format: 'umd',
       name: 'vis',

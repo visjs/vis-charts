@@ -2,6 +2,7 @@
     "excludeExternals": true,
     "excludeNotExported": true,
     "excludePrivate": true,
+    "ignoreCompilerErrors": true,
     "listInvalidSymbolLinks": true,
     "mode": "file",
     "out": "./docs",
