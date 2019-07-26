@@ -578,12 +578,12 @@ describe('mergeOptions', function () {
       assert.throws(function () {util.convert({}, 'Date');}, Error, null);
     });
 
-    xit('converts to Moment from Numbern - Throws a deprecation warning', function () {
+    it('converts to Moment from Number', function () {
       assert(util.convert(1198908717056, 'Moment') instanceof moment);
     });
 
     it('converts to Moment from String', function () {
-      assert(util.convert('1198908717056', 'Moment') instanceof moment);
+      assert(util.convert('2007-12-29T06:11:57.056Z', 'Moment') instanceof moment);
     });
 
     it('converts to Moment from Date', function () {
@@ -634,7 +634,7 @@ describe('mergeOptions', function () {
       assert(ASPDateRegex.test(util.convert('/Date(12344444)/', 'ASPDate')));
     });
 
-    xit('converts to ASPDate from Moment - skipped, because it fails', function () {
+    it('converts to ASPDate from Moment', function () {
       assert(ASPDateRegex.test(util.convert(new moment(), 'ASPDate')));
     });
 
