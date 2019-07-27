@@ -1,6 +1,6 @@
 {
   "name": "vis-util",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "utilitie collection for visjs",
   "main": "dist/umd.js",
   "module": "dist/esm.js",
@@ -32,8 +32,8 @@
     "clean": "rimraf '{docs,dist}/*'",
     "fix": "npm run lint -- --fix",
     "lint": "eslint '{src,test}/**/*.{m,}{j,t}s{x,}'",
-    "prepublishOnly": "npm run test && npm run type-check && npm run lint",
-    "preversion": "npm run test && npm run type-check && npm run lint",
+    "prepublishOnly": "npm run test && npm run type-check",
+    "preversion": "npm run test && npm run type-check",
     "test": "BABEL_ENV=test mocha",
     "test-cov": "BABEL_ENV=test-cov nyc mocha",
     "type-check": "tsc --noemit",
