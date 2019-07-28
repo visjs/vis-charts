@@ -1,31 +1,22 @@
-# vis.js
+# vis-charts
 
-:warning: **This module has not been released yet!**<br>
-:warning: **This repository is currently under havy development.**<br>
-:warning: **The git history might be overwritten at any time!**<br>
-:warning: **Please come back later in a few days for updates!**
-
+**This is a "pug'n & play replacement" for [vis](https://github.com/almende/vis), wich is no longer maintained**
 
 Vis.js is a dynamic, browser based visualization library.
 The library is designed to be easy to use, handle large amounts
 of dynamic data, and enable manipulation of the data.
 The library consists of the following components:
 
-- DataSet and DataView. A flexible key/value based data set. Add, update, and
+- [DataSet and DataView](https://github.com/visjs/vis-data). A flexible key/value based data set. Add, update, and
   remove items. Subscribe on changes in the data set. A DataSet can filter and
-  order items, and convert fields of items.
-- DataView. A filtered and/or formatted view on a DataSet.
-- Graph2d. Plot data on a timeline with lines or barcharts.
-- Graph3d. Display data in a three dimensional graph.
-- Network. Display a network (force directed graph) with nodes and edges.
-- Timeline. Display different types of data on a timeline.
+  order items, and convert fields of items. A filtered and/or formatted view on a DataSet.
+- [Network](https://github.com/visjs/vis-network). Display a network (force directed graph) with nodes and edges.
+- [Timeline and Graph2d](https://github.com/visjs/vis-timeline). Display different types of data on a timeline.
+- [Graph3d](https://github.com/visjs/vis-graph3d). Display data in a three dimensional graph.
 
-The vis.js library was initially developed by [Almende B.V](http://almende.com) and is now maintained by the [visjs community](https://github.com/visjs).
+**This version of the original [vis](https://github.com/almende/vis) library is based on the lates state of the [`develop` branch (320b18), from 20.02.2019](https://github.com/almende/vis/commit/320b1809fcbdf1d281e54ab8baa3daf84a1f358b) and started therefore as an improved version 4.21. From there on we developed this repository further. You are welcome to help!**
 
 ## Badges
-
-[![GitHub contributors](https://img.shields.io/github/contributors/visjs/vis-charts.svg)](https://github.com/visjs/vis-charts/graphs/contributors)
-[![GitHub stars](https://img.shields.io/github/stars/visjs/vis-charts.svg)](https://github.com/almende/vis/stargazers)
 
 [![Backers on Open Collective](https://opencollective.com/visjs/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/visjs/sponsors/badge.svg)](#sponsors) 
 
@@ -34,25 +25,6 @@ The vis.js library was initially developed by [Almende B.V](http://almende.com) 
 Install via npm:
 
     $ npm install vis-charts
-
-## Load
-
-To use a component, include the javascript and css files of vis in your web page:
-
-```html
-<!DOCTYPE HTML>
-<html>
-<head>
-  <script src="webroot/vis/dist/vis.min.js"></script>
-  <link href="webroot/vis/dist/vis.min.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
-  <script type="text/javascript">
-    // ... load a visualization
-  </script>
-</body>
-</html>
-```
 
 ## Build
 
@@ -84,6 +56,7 @@ Then run the tests:
 ## Contribute
 
 Contributions to the vis.js library are very welcome! We can't do this alone!
+Please submit your contribution to the respective project.
 
 ### Backers
 

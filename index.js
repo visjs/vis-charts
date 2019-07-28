@@ -1,10 +1,43 @@
-var util = require('vis-util');
+// utils
+import util from 'vis-util';
+//vis.util = util;
 
-// Graph3d
-util.extend(exports, require('./index-graph3d'));
+// data
+import { DataSet, DataView, Queue } from 'vis-data';
 
-// Timeline & Graph2d
-util.extend(exports, require('./index-timeline-graph2d'));
+// // Network.
+// var { Network, Images, dotparser, gephiParser, allOptions } = require('vis-network');
+// vis.Network = Network;
+// vis.network = { Images, dotparser, gephiParser, allOptions };
+// vis.network.convertDot   = function (input) {return vis.network.dotparser.DOTToGraph(input)};
+// vis.network.convertGephi = function (input,options) {return vis.network.gephiParser.parseGephi(input,options)};
 
-// Network
-util.extend(exports, require('./index-network'));
+// // Graph3d
+// var { Graph3d, graph3d, Camera, Filter, Point2d, Point3d, Slider, StepNumber } = require('vis-graph3d');
+// vis.Graph3d = Graph3d;
+// vis.graph3d = { graph3d, Camera, Filter, Point2d, Point3d, Slider, StepNumber };
+
+// Timeline
+import { Timeline, Graph2d, timeline } from 'vis-timeline';
+// vis.Timeline = Timeline;
+// vis.Graph2d = Graph2d;
+// vis.timeline = timeline;
+
+// misc
+import { DOMutil, keycharm, moment, Hammer } from 'vis-timeline';
+// vis.DOMutil = DOMutil;
+// vis.keycharm = keycharm;
+// vis.moment = moment;
+// vis.Hammer = Hammer;
+
+export default {
+	util, 
+
+	DataSet, 
+	DataView, 
+	Queue,
+
+	Timeline, Graph2d, timeline,
+
+	DOMutil, keycharm, moment, Hammer
+};
