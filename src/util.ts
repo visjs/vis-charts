@@ -233,14 +233,11 @@ export const extend = Object.assign
  * @returns Argument a.
  */
 export function selectiveExtend(props: string[], a: any, ...others: any[]): any {
-  // @TODO: better solution?
   if (!Array.isArray(props)) {
     throw new Error('Array with property names expected as first argument')
   }
 
-  for (let i = 2; i < others.length; i++) {
-    const other = others[i]
-
+  for (const other of others) {
     for (let p = 0; p < props.length; p++) {
       const prop = props[p]
       if (other && Object.prototype.hasOwnProperty.call(other, prop)) {
