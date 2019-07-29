@@ -30,8 +30,8 @@
     "build:docs": "typedoc ./src",
     "build:types": "tsc -p tsconfig.types.json",
     "clean": "rimraf '{docs,dist}/*'",
-    "fix": "npm run lint -- --fix",
     "lint": "eslint '{src,test}/**/*.{m,}{j,t}s{x,}'",
+    "lint:fix": "npm run lint -- --fix",
     "prepublishOnly": "npm run test && npm run type-check",
     "preversion": "npm run test && npm run type-check",
     "test": "BABEL_ENV=test mocha",
@@ -40,6 +40,13 @@
     "version": "npm run build:docs && git add docs && npm run contributors:update && git add package.json",
     "contributors:update": "git-authors-cli",
     "preparepublish": "npm run contributors:update"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged",
+      "pre-push": "npm test"
+    }
   },
   "engines": {
     "node": ">=8"
@@ -70,6 +77,8 @@
     "@babel/preset-typescript": "^7.3.3",
     "@babel/register": "^7.4.4",
     "@babel/runtime": "^7.5.4",
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
     "@types/chai": "^4.1.7",
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.0.12",
@@ -83,8 +92,10 @@
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-prettier": "^3.1.0",
     "git-authors-cli": "^1.0.18",
+    "husky": "^3.0.1",
     "jsdom": "^15.1.1",
     "jsdom-global": "^3.0.2",
+    "lint-staged": "^9.2.1",
     "mocha": "^6.1.4",
     "nyc": "^14.1.1",
     "prettier": "^1.18.2",
