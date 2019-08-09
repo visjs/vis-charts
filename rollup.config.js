@@ -1,17 +1,25 @@
 import commonjs from 'rollup-plugin-commonjs';
+import nodeBuiltins from 'rollup-plugin-node-builtins';
 import nodeResolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
 import minify from 'rollup-plugin-babel-minify';
 import genHeader from './lib/header';
+import css from 'rollup-plugin-css-porter';
+import typescript from 'rollup-plugin-typescript';
 
 const plugins = [
+	nodeBuiltins(),
 	nodeResolve({
 		extensions: ['.ts', '.js', '.json']
 	}),
 	commonjs(),
+	typescript(),
 	babel({
 		extensions: ['.ts', '.js'],
 		runtimeHelpers: true
+	}),
+	css({
+		dest: 'dist/vis.css'
 	})
 ]
 const minPlugins = [
