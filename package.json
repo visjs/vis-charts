@@ -27,11 +27,11 @@
     "LICENSE*"
   ],
   "scripts": {
-    "build:js": "rollup --config rollup.config.js",
-    "build:css": "concat-glob-cli -f 'node_modules/vis-*/dist/+([^.]).css' -o dist/vis.css && uglifycss dist/vis.css > dist/vis.min.css",
-    "build": "npm run build:js && npm run build:css",
-    "prepublishOnly": "npm run build",
     "clean": "rimraf 'dist/*'",
+    "copy:images": "cpy ./node_modules/vis-network/dist/img/network/ ./dist/img/network/",
+    "build:js": "rollup --config rollup.config.js",
+    "build": "npm run build:js && npm run copy:images",
+    "prepublishOnly": "npm run build",
     "postinstall": "opencollective postinstall || exit 0"
   },
   "dependencies": {
@@ -46,7 +46,6 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/register": "^7.5.5",
     "clean-css": "^4.2.1",
-    "concat-glob-cli": "^0.1.0",
     "cpy-cli": "^2.0.0",
     "opencollective": "^1.0.3",
     "rimraf": "^2.6.3",
