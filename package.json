@@ -1,12 +1,12 @@
 {
   "name": "vis-charts",
-  "version": "5.0.0",
+  "version": "0.0.0-no-version",
   "description": "A dynamic, browser-based visualization library.",
   "homepage": "http://visjs.org/",
   "license": "(Apache-2.0 OR MIT)",
   "repository": {
     "type": "git",
-    "url": "git://github.com/almende/vis.git"
+    "url": "https://github.com/visjs/vis-charts.git"
   },
   "keywords": [
     "vis",
@@ -30,7 +30,7 @@
     "build:js": "rollup --config rollup.config.js",
     "build:css": "concat-glob-cli -f 'node_modules/vis-*/dist/+([^.]).css' -o dist/vis.css && uglifycss dist/vis.css > dist/vis.min.css",
     "build": "npm run build:js && npm run build:css",
-    "prepublishOnly": "npm run clean && npm run build",
+    "prepublishOnly": "npm run build",
     "clean": "rimraf 'dist/*'",
     "postinstall": "opencollective postinstall || exit 0"
   },
