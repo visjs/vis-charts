@@ -14,51 +14,41 @@ The library consists of the following components:
 - [Timeline and Graph2d](https://github.com/visjs/vis-timeline). Display different types of data on a timeline.
 - [Graph3d](https://github.com/visjs/vis-graph3d). Display data in a three dimensional graph.
 
-**This version of the original [vis](https://github.com/almende/vis) library is based on the lates state of the [`develop` branch (320b18), from 20.02.2019](https://github.com/almende/vis/commit/320b1809fcbdf1d281e54ab8baa3daf84a1f358b) and started therefore as an improved version 4.21. From there on we developed this repository further. You are welcome to help!**
+This repository bundles multible libraries:
+
+- [vis-data](//github.com/visjs/vis-data)
+- [vis-network](//github.com/visjs/vis-network)
+- [vis-timeline](//github.com/visjs/vis-timeline)
+- [vis-graph3d](//github.com/visjs/vis-graph3d)
+
+It also includes other external libraries:
+
+- [moment.js](//www.npmjs.com/package/moment)
+- [@egjs/hammerjs](//www.npmjs.com/package/@egjs/hammerjs)
+- [keycharm](//www.npmjs.com/package/keycharm)
+- [timsort](//www.npmjs.com/package/timsort)
+- _and some propably more..._
 
 ## Badges
 
- [![Greenkeeper badge](https://badges.greenkeeper.io/visjs/vis-charts.svg)](https://greenkeeper.io/) 
+ [![Greenkeeper badge](https://badges.greenkeeper.io/visjs/vis-charts.svg)](https://greenkeeper.io/)
 
 [![Backers on Open Collective](https://opencollective.com/visjs/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/visjs/sponsors/badge.svg)](#sponsors)
 
-## Install
+## Usage
 
-Install via npm:
+:warning: **This library is very big and should better not be used! Please use one of the libraries from the [visjs family](//github.com/visjs) insted!**
 
-    $ npm install vis-charts
+If you really want to, you can replace your old `almende/vis@4.12` files with our new one:
 
-## Build
-
-To build the library from source, clone the project from github
-
-    $ git clone git://github.com/visjs/vis-charts.git
-
-The source code uses the module style of node (require and module.exports) to
-organize dependencies. To install all dependencies and build the library,
-run `npm install` in the root of the project.
-
-    $ cd vis
-    $ npm install
-
-Then, the project can be build running:
-
-    $ npm run build
-
-## Test
-
-To test the library, install the project dependencies once:
-
-    $ npm install
-
-Then run the tests:
-
-    $ npm run test
+```html
+<script src="//unpkg.com/vis-charts@1.0.0/dist/vis.min.js"></script>
+<link href="//unpkg.com/vis-charts@1.0.0/dist/vis.min.css" rel="stylesheet" type="text/css">
+```
 
 ## Contribute
 
-Contributions to the vis.js library are very welcome! We can't do this alone!
-Please submit your contribution to the respective project.
+Contributions to the [visjs libraries](https://github.com/visjs) are very welcome! We can't do this alone!
 
 ### Backers
 
