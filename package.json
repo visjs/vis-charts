@@ -39,7 +39,7 @@
     "vis-graph3d": "^5.0.0",
     "vis-network": "^5.2.3",
     "vis-timeline": "^5.1.0",
-    "vis-util": "^1.1.4"
+    "vis-util": "^1.1.6"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
