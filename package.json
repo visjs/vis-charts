@@ -35,9 +35,9 @@
     "postinstall": "opencollective postinstall || exit 0"
   },
   "dependencies": {
-    "vis-data": "^6.1.1",
-    "vis-graph3d": "^5.0.0",
-    "vis-network": "^5.2.3",
+    "vis-data": "^6.2.0",
+    "vis-graph3d": "^5.0.1",
+    "vis-network": "^5.2.4",
     "vis-timeline": "^5.1.0",
     "vis-util": "^1.1.6"
   },
@@ -49,14 +49,14 @@
     "cpy-cli": "^2.0.0",
     "opencollective": "^1.0.3",
     "rimraf": "^3.0.0",
-    "rollup": "^1.19.4",
+    "rollup": "^1.20.3",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-babel-minify": "^9.0.0",
-    "rollup-plugin-commonjs": "^10.0.2",
+    "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-css-porter": "^1.0.2",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-typescript2": "^0.23.0",
-    "typescript": "^3.5.3",
+    "rollup-plugin-typescript2": "^0.24.0",
+    "typescript": "^3.6.2",
     "uglifycss": "0.0.29"
   },
   "collective": {
