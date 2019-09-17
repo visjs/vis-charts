@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>All | Basic usage</title>
+
+    <script src="../dist/vis.min.js"></script>
+    <link href="../dist/vis.min.css" rel="stylesheet" />
+
+    <style type="text/css">
+      body,
+      html {
+        font-family: sans-serif;
+        font: 10pt arial;
+      }
+      .my-chart {
+        border: 1px solid lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Network</h1>
+    <div id="network" class="my-chart"></div>
+
+    <script type="text/javascript">
+      (function() {
+        // create an array with nodes
+        var nodes = new vis.DataSet([
+          { id: 1, label: "Node 1" },
+          { id: 2, label: "Node 2" },
+          { id: 3, label: "Node 3" },
+          { id: 4, label: "Node 4" },
+          { id: 5, label: "Node 5" }
+        ]);
+
+        // create an array with edges
+        var edges = new vis.DataSet([
+          { from: 1, to: 3 },
+          { from: 1, to: 2 },
+          { from: 2, to: 4 },
+          { from: 2, to: 5 },
+          { from: 3, to: 3 }
+        ]);
+
+        // create a network
+        var container = document.getElementById("network");
+        var data = {
+          nodes: nodes,
+          edges: edges
+        };
+        var options = {};
+        var network = new vis.Network(container, data, options);
+      })();
+    </script>
+
+    <h1>Timeline</h1>
+    <div id="timeline" class="my-chart"></div>
+
+    <script type="text/javascript">
+      (function() {
+        // DOM element where the Timeline will be attached
+        var container = document.getElementById("timeline");
+
+        // Create a DataSet (allows two way data-binding)
+        var items = new vis.DataSet([
+          { id: 1, content: "item 1", start: "2014-04-20" },
+          { id: 2, content: "item 2", start: "2014-04-14" },
+          { id: 3, content: "item 3", start: "2014-04-18" },
+          { id: 4, content: "item 4", start: "2014-04-16", end: "2014-04-19" },
+          { id: 5, content: "item 5", start: "2014-04-25" },
+          { id: 6, content: "item 6", start: "2014-04-27", type: "point" }
+        ]);
+
+        // Configuration for the Timeline
+        var options = {};
+
+        // Create a Timeline
+        var timeline = new vis.Timeline(container, items, options);
+      })();
+    </script>
+
+    <h1>Graph2D</h1>
+    <div id="graph2d" class="my-chart"></div>
+
+    <script type="text/javascript">
+      (function() {
+        var container = document.getElementById("graph2d");
+        var items = [
+          { x: "2014-06-11", y: 10 },
+          { x: "2014-06-12", y: 25 },
+          { x: "2014-06-13", y: 30 },
+          { x: "2014-06-14", y: 10 },
+          { x: "2014-06-15", y: 15 },
+          { x: "2014-06-16", y: 30 }
+        ];
+
+        var dataset = new vis.DataSet(items);
+        var options = {
+          start: "2014-06-10",
+          end: "2014-06-18"
+        };
+        var graph2d = new vis.Graph2d(container, dataset, options);
+      })();
+    </script>
+
+    <h1>Graph3D</h1>
+    <div id="graph3d" class="my-chart"></div>
+
+    <script type="text/javascript">
+      (function() {
+        var data = null;
+        var graph = null;
+
+        function custom(x, y) {
+          return Math.sin(x / 50) * Math.cos(y / 50) * 50 + 50;
+        }
+
+        // Create and populate a data table.
+        data = new vis.DataSet();
+        // create some nice looking data with sin/cos
+        var counter = 0;
+        var steps = 50; // number of datapoints will be steps*steps
+        var axisMax = 314;
+        var axisStep = axisMax / steps;
+        for (var x = 0; x < axisMax; x += axisStep) {
+          for (var y = 0; y < axisMax; y += axisStep) {
+            var value = custom(x, y);
+            data.add({ id: counter++, x: x, y: y, z: value, style: value });
+          }
+        }
+
+        // specify options
+        var options = {
+          width: "600px",
+          height: "600px",
+          style: "surface",
+          showPerspective: true,
+          showGrid: true,
+          showShadow: false,
+          keepAspectRatio: true,
+          verticalRatio: 0.5
+        };
+
+        // Instantiate our graph object.
+        var container = document.getElementById("graph3d");
+        graph = new vis.Graph3d(container, data, options);
+      })();
+    </script>
+  </body>
+</html>
