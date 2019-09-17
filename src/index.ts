@@ -1,33 +1,65 @@
 // utils
-import * as util from 'vis-util';
+import * as util from "vis-util";
 
 // data
-import { DataSet, DataView, Queue } from 'vis-data';
+import { DataSet, DataView, Queue } from "vis-data";
 
 // Network
-import { Network, network } from '../node_modules/vis-network/lib';
+import {
+  Network,
+  NetworkImages,
+  networkDOTParser,
+  networkGephiParser,
+  networkOptions,
+  parseDOTNetwork,
+  parseGephiNetwork
+} from "vis-network/peer/esm/vis-network";
+const network = {
+  Images: NetworkImages,
+  dotparser: networkDOTParser,
+  gephiParser: networkGephiParser,
+  allOptions: networkOptions,
+  convertDot: parseDOTNetwork,
+  convertGephi: parseGephiNetwork
+};
 
 // Graph3d
-import { Graph3d, graph3d } from '../node_modules/vis-graph3d/index';
+import { Graph3d, graph3d } from "../node_modules/vis-graph3d/index";
 
 // Timeline
-import { Timeline, Graph2d, timeline } from '../node_modules/vis-timeline/index';
+import {
+  Timeline,
+  Graph2d,
+  timeline
+} from "../node_modules/vis-timeline/index";
 
 // misc
-import { DOMutil, keycharm, moment, Hammer } from '../node_modules/vis-timeline/index';
+import {
+  DOMutil,
+  keycharm,
+  moment,
+  Hammer
+} from "../node_modules/vis-timeline/index";
 
 export default {
-	util,
+  util,
 
-	DataSet,
-	DataView,
-	Queue,
+  DataSet,
+  DataView,
+  Queue,
 
-	Network, network,
+  Network,
+  network,
 
-	Graph3d, graph3d,
+  Graph3d,
+  graph3d,
 
-	Timeline, Graph2d, timeline,
+  Timeline,
+  Graph2d,
+  timeline,
 
-	DOMutil, keycharm, moment, Hammer
+  DOMutil,
+  keycharm,
+  moment,
+  Hammer
 };
