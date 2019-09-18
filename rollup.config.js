@@ -30,7 +30,6 @@ const minPlugins = [
 		minified: 'dist/vis.min.css',
 		raw: false,
 	}),
-	// Note: mangling consumes way too much memory on such a big project.
 	terser({
 		output: {
 			comments: (_node, { value }) => /@license/.test(value)
