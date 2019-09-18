@@ -3,7 +3,7 @@ import nodeResolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
 import typescript from 'rollup-plugin-typescript2';
 import css from 'rollup-plugin-css-porter';
-import minify from 'rollup-plugin-babel-minify';
+import { terser } from 'rollup-plugin-terser';
 import genHeader from './lib/header';
 
 const plugins = [
@@ -31,7 +31,11 @@ const minPlugins = [
 		raw: false,
 	}),
 	// Note: mangling consumes way too much memory on such a big project.
-	minify({ comments: false, mangle: false })
+	terser({
+		output: {
+			comments: (_node, { value }) => /@license/.test(value)
+		}
+	})
 ]
 
 export default [{
