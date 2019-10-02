@@ -14,7 +14,11 @@ const plugins = [
 		tsconfig: 'tsconfig.code.json',
 		abortOnError: false
 	}),
-	commonjs(),
+	commonjs({
+		namedExports: {
+			'timsort': ['sort'] // Autodetection fails here.
+		}
+	}),
 	babel({
 		extensions: ['.ts', '.js'],
 		runtimeHelpers: true
