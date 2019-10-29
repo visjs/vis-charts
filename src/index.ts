@@ -5,7 +5,23 @@ import * as util from 'vis-util';
 import { DataSet, DataView, Queue } from 'vis-data';
 
 // Network
-import { Network, network } from '../node_modules/vis-network/lib';
+import {
+	Network,
+	NetworkImages,
+	networkDOTParser,
+	networkGephiParser,
+	networkOptions,
+	parseDOTNetwork,
+	parseGephiNetwork
+} from 'vis-network/peer/esm/vis-network.min';
+const network = {
+	Images: NetworkImages,
+	allOptions: networkOptions,
+	convertDot: parseDOTNetwork,
+	convertGephi: parseGephiNetwork,
+	dotparser: networkDOTParser,
+	gephiParser: networkGephiParser
+};
 
 // Graph3d
 import { Graph3d, graph3d } from '../node_modules/vis-graph3d/index';

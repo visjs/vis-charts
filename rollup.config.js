@@ -1,18 +1,13 @@
 import commonjs from 'rollup-plugin-commonjs';
 import nodeResolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
-import typescript from 'rollup-plugin-typescript2';
-import css from 'rollup-plugin-css-porter';
-import minify from 'rollup-plugin-babel-minify';
+import postcss from 'rollup-plugin-postcss';
+import { terser } from 'rollup-plugin-terser';
 import genHeader from './lib/header';
 
 const plugins = [
 	nodeResolve({
-		extensions: ['.ts', '.js', '.json']
-	}),
-	typescript({
-		tsconfig: 'tsconfig.code.json',
-		abortOnError: false
+		extensions: ['.js', '.json']
 	}),
 	commonjs({
 		namedExports: {
@@ -23,19 +18,26 @@ const plugins = [
 		extensions: ['.ts', '.js'],
 		runtimeHelpers: true
 	}),
-	css({
-		minified: false,
-		raw: 'dist/vis.css',
+	postcss({
+		extract: 'dist/vis.css',
+		inject: false,
+		minimize: false,
+		sourceMap: true
 	}),
 ]
 const minPlugins = [
 	...plugins.slice(0, -1),
-	css({
-		minified: 'dist/vis.min.css',
-		raw: false,
+	postcss({
+		extract: 'dist/vis.min.css',
+		inject: false,
+		minimize: true,
+		sourceMap: true
 	}),
-	// Note: mangling consumes way too much memory on such a big project.
-	minify({ comments: false, mangle: false })
+	terser({
+		output: {
+			comments: (_node, { value }) => /@license/.test(value)
+		}
+	})
 ]
 
 export default [{
