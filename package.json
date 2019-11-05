@@ -44,7 +44,7 @@
   "devDependencies": {
     "@babel/core": "^7.7.0",
     "@babel/preset-env": "^7.7.0",
-    "@babel/register": "^7.5.5",
+    "@babel/register": "^7.7.0",
     "clean-css": "^4.2.1",
     "cpy-cli": "^2.0.0",
     "opencollective": "^1.0.3",
