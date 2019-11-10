@@ -5,7 +5,7 @@
  * A dynamic, browser-based visualization library.
  *
  * @version 0.0.0-no-version
- * @date    2019-10-29T22:56:18Z
+ * @date    2019-11-10T16:06:47Z
  *
  * @copyright (c) 2011-2017 Almende B.V, http://almende.com
  * @copyright (c) 2018-2019 visjs contributors, https://github.com/visjs
@@ -18091,8 +18091,8 @@
    *
    * A dynamic, browser-based visualization library.
    *
-   * @version 6.3.0
-   * @date    2019-10-28T22:26:33Z
+   * @version 6.3.2
+   * @date    2019-11-08T19:05:41Z
    *
    * @copyright (c) 2011-2017 Almende B.V, http://almende.com
    * @copyright (c) 2018-2019 visjs contributors, https://github.com/visjs
@@ -27447,9 +27447,7 @@
           t.body.eventListeners.onDragEnd(e);
         }), this.hammer.on("pinch", function (e) {
           t.body.eventListeners.onPinch(e);
-        }), this.frame.canvas.addEventListener("mousewheel", function (e) {
-          t.body.eventListeners.onMouseWheel(e);
-        }), this.frame.canvas.addEventListener("DOMMouseScroll", function (e) {
+        }), this.frame.canvas.addEventListener("wheel", function (e) {
           t.body.eventListeners.onMouseWheel(e);
         }), this.frame.canvas.addEventListener("mousemove", function (e) {
           t.body.eventListeners.onMouseMove(e);
@@ -28204,17 +28202,14 @@
       key: "onMouseWheel",
       value: function (t) {
         if (!0 === this.options.zoomView) {
-          var e = 0;
-
-          if (t.wheelDelta ? e = t.wheelDelta / 120 : t.detail && (e = -t.detail / 3), 0 !== e) {
-            var i = this.body.view.scale,
-                o = e * (this.options.zoomSpeed / 10);
-            e < 0 && (o /= 1 - o), i *= 1 + o;
-            var n = this.getPointer({
+          if (0 !== t.deltaY) {
+            var e = this.body.view.scale;
+            e *= 1 + (t.deltaY < 0 ? 1 : -1) * (.1 * this.options.zoomSpeed);
+            var i = this.getPointer({
               x: t.clientX,
               y: t.clientY
             });
-            this.zoom(i, n);
+            this.zoom(e, i);
           }
 
           t.preventDefault();
