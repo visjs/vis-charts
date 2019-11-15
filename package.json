@@ -26,6 +26,10 @@
     "dist",
     "LICENSE*"
   ],
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/visjs"
+  },
   "scripts": {
     "clean": "rimraf 'dist/*'",
     "copy:images": "cpy ./node_modules/vis-network/dist/img/network/ ./dist/img/network/",
