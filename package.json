@@ -40,7 +40,7 @@
   },
   "dependencies": {
     "vis-data": "6.2.1",
-    "vis-graph3d": "5.3.1",
+    "vis-graph3d": "5.4.1",
     "vis-network": "6.1.1",
     "vis-timeline": "5.1.0",
     "vis-util": "1.1.8"
