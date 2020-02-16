@@ -46,9 +46,9 @@
     "vis-util": "1.1.8"
   },
   "devDependencies": {
-    "@babel/core": "7.5.5",
-    "@babel/preset-env": "7.5.5",
-    "@babel/register": "7.5.5",
+    "@babel/core": "7.8.4",
+    "@babel/preset-env": "7.8.4",
+    "@babel/register": "7.8.3",
     "clean-css": "4.2.1",
     "cpy-cli": "2.0.0",
     "opencollective": "1.0.3",
