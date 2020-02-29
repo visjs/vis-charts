@@ -60,7 +60,7 @@
     "rollup-plugin-css-porter": "1.0.2",
     "rollup-plugin-node-resolve": "5.2.0",
     "rollup-plugin-typescript2": "0.26.0",
-    "typescript": "3.8.2",
+    "typescript": "3.8.3",
     "uglifycss": "0.0.29"
   },
   "collective": {
