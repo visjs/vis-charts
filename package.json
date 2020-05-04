@@ -50,7 +50,7 @@
     "@babel/preset-env": "7.9.6",
     "@babel/register": "7.9.0",
     "clean-css": "4.2.3",
-    "cpy-cli": "3.1.0",
+    "cpy-cli": "3.1.1",
     "opencollective": "1.0.3",
     "rimraf": "3.0.2",
     "rollup": "2.7.6",
