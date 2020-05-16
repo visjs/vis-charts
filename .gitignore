@@ -19,3 +19,11 @@ coverage/
 report.*.json
 vis-charts-*.tgz
 /.rpt2_cache/
+/declarations/
+/esnext/
+/examples/examples.css
+/examples/generated/
+/examples/index.html
+/peer/
+/standalone/
+/styles/

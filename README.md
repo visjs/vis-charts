@@ -1,7 +1,5 @@
 # vis-charts
 
-**This is a "plug'n & play replacement" for [vis](https://github.com/almende/vis), wich is no longer maintained**
-
 Vis.js is a dynamic, browser based visualization library.
 The library is designed to be easy to use, handle large amounts
 of dynamic data, and enable manipulation of the data.

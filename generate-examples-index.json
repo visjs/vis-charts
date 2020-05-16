@@ -1,0 +1,22 @@
+{
+  "base-url": "https://visjs.github.io/vis-charts/",
+  "output-directory": "./examples",
+
+  "assets-local-directory": "./examples/generated",
+  "assets-web-directory": "./generated",
+  "examples-local-directory": "./examples",
+  "examples-web-directory": "./",
+  "pages-local-directory": "./examples/generated",
+  "pages-web-directory": "../generated",
+
+  "index": true,
+  "lint": true,
+  "playgrounds": true,
+  "screenshots": true,
+
+  "container-id": "chart",
+  "format": "html",
+  "parallel": 6,
+  "title": "Vis Charts Examples",
+  "verify": 100
+}
