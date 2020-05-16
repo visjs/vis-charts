@@ -1,16 +1,10 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <title>Timeline | Basic usage</title>
+  <title>Charts | Timeline</title>
 
-  <script src="../dist/vis.min.js"></script>
-  <link href="../dist/vis.min.css" rel="stylesheet" />
-
-  <style type="text/css">
-    body, html {
-      font-family: sans-serif;
-    }
-  </style>
+  <script src="../standalone/umd/vis-charts.min.js"></script>
+  <link href="../styles/vis-charts.min.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
@@ -18,11 +12,11 @@
   A basic timeline. You can move and zoom the timeline, and select items.
 </p>
 
-<div id="timeline"></div>
+<div id="chart"></div>
 
 <script type="text/javascript">
   // DOM element where the Timeline will be attached
-  var container = document.getElementById('timeline');
+  var container = document.getElementById('chart');
 
   // Create a DataSet (allows two way data-binding)
   var items = new vis.DataSet([
