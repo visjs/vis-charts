@@ -1,6 +1,6 @@
 # vis-charts
 
-**This is mostly (same export structure) a "plug'n & play replacement" for [vis](https://github.com/almende/vis), wich is no longer maintained**	
+**This is mostly (same export structure) a "plug'n & play replacement" for [vis](https://github.com/almende/vis), wich is no longer maintained**
 
 Vis.js is a dynamic, browser based visualization library.
 The library is designed to be easy to use, handle large amounts
@@ -37,11 +37,11 @@ It also includes other external libraries:
 
 :warning: **This library is very big and should better not be used! Please use one of the libraries from the [visjs family](//github.com/visjs) instead!**
 
-If you really want to, you can replace your old `almende/vis@4.12` files with our new one:
+If you really want to, you can replace your old `almende/vis@4.12` files with our new one (replace `latest` by a specific version to prevent unexpected updates):
 
 ```html
-<script src="//unpkg.com/vis-charts@1.0.0/dist/vis.min.js"></script>
-<link href="//unpkg.com/vis-charts@1.0.0/dist/vis.min.css" rel="stylesheet" type="text/css">
+<script src="//unpkg.com/vis-charts@latest/dist/vis.min.js"></script>
+<link href="//unpkg.com/vis-charts@latest/dist/vis.min.css" rel="stylesheet" type="text/css">
 ```
 
 ## Contribute
