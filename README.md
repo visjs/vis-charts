@@ -1,6 +1,6 @@
 # vis-charts
 
-**This is a "plug'n & play replacement" for [vis](https://github.com/almende/vis), wich is no longer maintained**
+**This is mostly (same export structure) a "plug'n & play replacement" for [vis](https://github.com/almende/vis), wich is no longer maintained**
 
 Vis.js is a dynamic, browser based visualization library.
 The library is designed to be easy to use, handle large amounts
@@ -31,19 +31,17 @@ It also includes other external libraries:
 
 ## Badges
 
- [![Greenkeeper badge](https://badges.greenkeeper.io/visjs/vis-charts.svg)](https://greenkeeper.io/)
-
 [![Backers on Open Collective](https://opencollective.com/visjs/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/visjs/sponsors/badge.svg)](#sponsors)
 
 ## Usage
 
 :warning: **This library is very big and should better not be used! Please use one of the libraries from the [visjs family](//github.com/visjs) instead!**
 
-If you really want to, you can replace your old `almende/vis@4.12` files with our new one:
+If you really want to, you can replace your old `almende/vis@4.12` files with our new one (replace `latest` by a specific version to prevent unexpected updates):
 
 ```html
-<script src="//unpkg.com/vis-charts@1.0.0/dist/vis.min.js"></script>
-<link href="//unpkg.com/vis-charts@1.0.0/dist/vis.min.css" rel="stylesheet" type="text/css">
+<script src="//unpkg.com/vis-charts@latest/dist/vis.min.js"></script>
+<link href="//unpkg.com/vis-charts@latest/dist/vis.min.css" rel="stylesheet" type="text/css">
 ```
 
 ## Contribute
@@ -73,7 +71,8 @@ Support this project by becoming a sponsor. Your logo will show up here with a l
 
 ## License
 
-Copyright (C) 2010-2018 Almende B.V. and Contributors
+Copyright (c) 2014-2017 Almende B.V. and contributors
+Copyright (c) 2017-2020 vis.js contributors
 
 Vis.js is dual licensed under both
 

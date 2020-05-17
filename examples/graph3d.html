@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <title>Graph3D | Basic usage</title>
+  <title>Charts | Graph3D</title>
 
-  <script src="../dist/vis.min.js"></script>
-  <link href="../dist/vis.min.css" rel="stylesheet" />
+  <script src="../standalone/umd/vis-charts.min.js"></script>
+  <link href="../styles/vis-charts.min.css" rel="stylesheet" type="text/css" />
 
   <style type="text/css">
     body {
@@ -14,7 +14,7 @@
 </head>
 <body onload="drawVisualization();">
 
-<div id="mygraph"></div>
+<div id="chart"></div>
 <div id="info"></div>
 
 <script type="text/javascript">
@@ -52,7 +52,7 @@
 	};
 
 	// Instantiate our graph object.
-	var container = document.getElementById('mygraph');
+	var container = document.getElementById('chart');
 	graph = new vis.Graph3d(container, data, options);
 </script>
 </body>

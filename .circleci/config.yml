@@ -49,7 +49,16 @@ jobs:
       - persist_to_workspace:
           root: .
           paths:
-            - 'dist'
+            - dist
+
+  test:
+    executor: node
+
+    steps:
+      - attach_workspace:
+          at: .
+
+      - run: npm run generate-examples-index
 
   release:
     executor: node
@@ -78,6 +87,10 @@ workflows:
       - build:
           requires:
             - prepare
+
+      - test:
+          requires:
+            - build
 
       - release:
           requires:
