@@ -49,11 +49,7 @@ jobs:
       - persist_to_workspace:
           root: .
           paths:
-            - declarations
-            - esnext
-            - peer
-            - standalone
-            - styles"
+            - dist
 
   test:
     executor: node

@@ -20,6 +20,7 @@ report.*.json
 vis-charts-*.tgz
 /.rpt2_cache/
 /declarations/
+/dist/
 /esnext/
 /examples/examples.css
 /examples/generated/

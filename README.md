@@ -1,5 +1,7 @@
 # vis-charts
 
+**This is mostly (same export structure) a "plug'n & play replacement" for [vis](https://github.com/almende/vis), wich is no longer maintained**	
+
 Vis.js is a dynamic, browser based visualization library.
 The library is designed to be easy to use, handle large amounts
 of dynamic data, and enable manipulation of the data.
@@ -28,8 +30,6 @@ It also includes other external libraries:
 - _and some propably more..._
 
 ## Badges
-
- [![Greenkeeper badge](https://badges.greenkeeper.io/visjs/vis-charts.svg)](https://greenkeeper.io/)
 
 [![Backers on Open Collective](https://opencollective.com/visjs/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/visjs/sponsors/badge.svg)](#sponsors)
 

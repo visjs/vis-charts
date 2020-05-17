@@ -29,6 +29,7 @@
   "files": [
     "LICENSE*",
     "declarations",
+    "dist",
     "esnext",
     "peer",
     "standalone",
@@ -39,23 +40,22 @@
     "url": "https://opencollective.com/visjs"
   },
   "scripts": {
-    "build": "rollup --config rollup.build.js",
-    "clean": "rimraf \"{esnext,peer,standalone,styles}\"",
+    "build": "run-s \"build:rollup\" \"build:copy\"",
+    "build:copy": "run-p \"build:copy:*\"",
+    "build:copy:images": "cpy \"**/*\" \"../dist/\" --cwd=legacy-files --parents",
+    "build:copy:vis.css": "cpy \"styles/vis-charts.css\" \"dist/\" --rename=vis.css",
+    "build:copy:vis.css.map": "cpy \"styles/vis-charts.css.map\" \"dist/\" --rename=vis.css.map",
+    "build:copy:vis.js": "cpy \"peer/umd/vis-charts.js\" \"dist/\" --rename=vis.js",
+    "build:copy:vis.js.map": "cpy \"peer/umd/vis-charts.js.map\" \"dist/\" --rename=vis.js.map",
+    "build:copy:vis.min.css": "cpy \"styles/vis-charts.min.css\" \"dist/\" --rename=vis.min.css",
+    "build:copy:vis.min.css.map": "cpy \"styles/vis-charts.min.css.map\" \"dist/\" --rename=vis.min.css.map",
+    "build:copy:vis.min.js": "cpy \"peer/umd/vis-charts.min.js\" \"dist/\" --rename=vis.min.js",
+    "build:copy:vis.min.js.map": "cpy \"peer/umd/vis-charts.min.js.map\" \"dist/\" --rename=vis.min.js.map",
+    "build:rollup": "rollup --config rollup.build.js",
+    "clean": "rimraf \"{dist,esnext,peer,standalone,styles}/*\"",
     "generate-examples-index": "generate-examples-index --config generate-examples-index.json",
-    "prepublishOnly": "npm run build",
-    "postinstall": "opencollective postinstall || exit 0"
-  },
-  "dependencies": {},
-  "peerDependencies": {
-    "@egjs/hammerjs": "^2.0.0",
-    "component-emitter": "^1.3.0",
-    "keycharm": "^0.3.0",
-    "moment": "^2.24.0",
-    "propagating-hammerjs": "^1.4.0",
-    "timsort": "^0.3.0",
-    "uuid": "^7.0.0 || ^8.0.0",
-    "vis-data": "^6.5.0",
-    "vis-util": "^4.0.0"
+    "postinstall": "opencollective postinstall || exit 0",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@babel/core": "7.9.6",
@@ -79,6 +79,7 @@
     "hammerjs": "2.0.8",
     "keycharm": "0.3.1",
     "moment": "2.25.3",
+    "npm-run-all": "4.1.5",
     "opencollective": "1.0.3",
     "prettier": "2.0.5",
     "propagating-hammerjs": "1.4.7",
@@ -97,12 +98,12 @@
     "timsort": "0.3.0",
     "typescript": "3.9.2",
     "uuid": "8.0.0",
-    "vis-data": "6.5.1",
-    "vis-dev-utils": "2.2.8",
-    "vis-graph3d": "5.9.3",
+    "vis-data": "6.5.2",
+    "vis-dev-utils": "2.2.11",
+    "vis-graph3d": "5.9.4",
     "vis-network": "7.6.4",
-    "vis-timeline": "7.3.5",
-    "vis-util": "4.0.0"
+    "vis-timeline": "7.3.6",
+    "vis-util": "4.0.1"
   },
   "collective": {
     "type": "opencollective",
