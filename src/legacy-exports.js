@@ -61,12 +61,16 @@ export const network = {
 defaultExport.network = network;
 
 /*
- * Leak internal Vis Util helper functions.
+ * Leak internal helper functions.
  */
 
 import * as util from "vis-util/esnext";
 export { util };
 defaultExport.util = util;
+
+import * as DOMutil from "./deprecated/DOMutil";
+export { DOMutil };
+defaultExport.DOMutil = DOMutil;
 
 /*
  * Reexport bundled external libraries.
