@@ -71,7 +71,8 @@ Support this project by becoming a sponsor. Your logo will show up here with a l
 
 ## License
 
-Copyright (C) 2010-2018 Almende B.V. and Contributors
+Copyright (c) 2014-2017 Almende B.V. and contributors
+Copyright (c) 2017-2020 vis.js contributors
 
 Vis.js is dual licensed under both
 
