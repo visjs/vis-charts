@@ -96,7 +96,7 @@
     "rollup-plugin-terser": "5.3.0",
     "rollup-plugin-typescript2": "0.27.1",
     "timsort": "0.3.0",
-    "typescript": "3.9.2",
+    "typescript": "3.9.3",
     "uuid": "8.0.0",
     "vis-data": "6.5.3",
     "vis-dev-utils": "2.2.13",
