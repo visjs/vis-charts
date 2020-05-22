@@ -97,7 +97,7 @@
     "rollup-plugin-typescript2": "0.27.1",
     "timsort": "0.3.0",
     "typescript": "3.9.3",
-    "uuid": "8.0.0",
+    "uuid": "8.1.0",
     "vis-data": "6.5.3",
     "vis-dev-utils": "2.2.13",
     "vis-graph3d": "5.9.4",
