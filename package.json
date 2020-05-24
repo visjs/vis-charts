@@ -55,7 +55,9 @@
     "clean": "rimraf \"{dist,esnext,peer,standalone,styles}/*\"",
     "generate-examples-index": "generate-examples-index --config generate-examples-index.json",
     "postinstall": "opencollective postinstall || exit 0",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "test": "run-s test:unit generate-examples-index",
+    "test:unit": "mocha --exit --config .mocharc.json"
   },
   "devDependencies": {
     "@babel/core": "7.9.6",
@@ -78,6 +80,7 @@
     "cpy-cli": "3.1.1",
     "hammerjs": "2.0.8",
     "keycharm": "0.3.1",
+    "mocha": "7.2.0",
     "moment": "2.26.0",
     "npm-run-all": "4.1.5",
     "opencollective": "1.0.3",
@@ -95,6 +98,7 @@
     "rollup-plugin-postcss": "3.1.1",
     "rollup-plugin-terser": "6.0.1",
     "rollup-plugin-typescript2": "0.27.1",
+    "snap-shot-it": "7.9.3",
     "timsort": "0.3.0",
     "typescript": "3.9.3",
     "uuid": "8.1.0",

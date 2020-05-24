@@ -1,0 +1,6 @@
+{
+  "extension": ["js"],
+  "require": ["vis-dev-utils/babel-register"],
+  "spec": ["./test/**/*.test.*"],
+  "watch-files": ["./src/**/*", "./test/**/*"]
+}
