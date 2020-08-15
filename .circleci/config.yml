@@ -46,6 +46,8 @@ jobs:
       - attach_workspace:
           at: .
 
+      - run: npx ci-utils install-dependencies-for chromium
+
       - run: npm run generate-examples-index
 
   release:
@@ -84,6 +86,7 @@ workflows:
           requires:
             - prepare
             - build
+            - test
           filters:
             branches:
               only:
