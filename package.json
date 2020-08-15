@@ -99,7 +99,7 @@
     "typescript": "3.9.7",
     "uuid": "8.3.0",
     "vis-data": "7.0.0",
-    "vis-dev-utils": "2.3.6",
+    "vis-dev-utils": "2.6.1",
     "vis-graph3d": "6.0.0",
     "vis-network": "8.2.0",
     "vis-timeline": "7.3.7",
