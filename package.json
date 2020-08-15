@@ -40,7 +40,7 @@
     "url": "https://opencollective.com/visjs"
   },
   "scripts": {
-    "build": "run-s \"build:rollup\" \"build:copy\"",
+    "build": "run-s \"build:rollup\" \"build:copy\" \"build:discard-redundant\"",
     "build:copy": "run-p \"build:copy:*\"",
     "build:copy:images": "cpy \"**/*\" \"../dist/\" --cwd=legacy-files --parents",
     "build:copy:vis.css": "cpy \"styles/vis-charts.css\" \"dist/\" --rename=vis.css",
@@ -51,6 +51,7 @@
     "build:copy:vis.min.css.map": "cpy \"styles/vis-charts.min.css.map\" \"dist/\" --rename=vis.min.css.map",
     "build:copy:vis.min.js": "cpy \"peer/umd/vis-charts.min.js\" \"dist/\" --rename=vis.min.js",
     "build:copy:vis.min.js.map": "cpy \"peer/umd/vis-charts.min.js.map\" \"dist/\" --rename=vis.min.js.map",
+    "build:discard-redundant": "rimraf \"{esnext,peer,standalone,styles}\"",
     "build:rollup": "rollup --config rollup.build.js",
     "clean": "rimraf \"{dist,esnext,peer,standalone,styles}/*\"",
     "generate-examples-index": "generate-examples-index --config generate-examples-index.json",
