@@ -71,7 +71,7 @@
     "rimraf": "3.0.2",
     "rollup": "2.28.2",
     "timsort": "0.3.0",
-    "uuid": "8.3.0",
+    "uuid": "8.3.1",
     "vis-data": "7.0.0",
     "vis-dev-utils": "2.7.10",
     "vis-graph3d": "6.0.0",
