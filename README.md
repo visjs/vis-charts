@@ -14,7 +14,7 @@ The library consists of the following components:
 - [Timeline and Graph2d](https://github.com/visjs/vis-timeline). Display different types of data on a timeline.
 - [Graph3d](https://github.com/visjs/vis-graph3d). Display data in a three dimensional graph.
 
-This repository bundles multible libraries:
+This repository bundles multiple libraries:
 
 - [vis-data](//github.com/visjs/vis-data)
 - [vis-network](//github.com/visjs/vis-network)
