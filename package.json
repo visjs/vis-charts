@@ -77,7 +77,7 @@
     "vis-graph3d": "6.0.1",
     "vis-network": "9.0.2",
     "vis-timeline": "7.4.3",
-    "vis-util": "5.0.1"
+    "vis-util": "5.0.2"
   },
   "collective": {
     "type": "opencollective",
