@@ -76,7 +76,7 @@
     "vis-dev-utils": "3.0.0",
     "vis-graph3d": "6.0.2",
     "vis-network": "9.1.0",
-    "vis-timeline": "7.5.0",
+    "vis-timeline": "7.5.1",
     "vis-util": "5.0.2"
   },
   "collective": {
