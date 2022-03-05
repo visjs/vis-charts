@@ -37,9 +37,23 @@ jobs:
       - persist_to_workspace:
           root: .
           paths:
+            - declarations
             - dist
+            - esnext
+            - peer
+            - standalone
+            - styles
 
-  test:
+  test_unit:
+    executor: node
+
+    steps:
+      - attach_workspace:
+          at: ..
+
+      - run: npm run test:unit
+
+  examples:
     executor: node
 
     steps:
@@ -47,6 +61,11 @@ jobs:
           at: .
 
       - run: npm run generate-examples-index
+
+      - persist_to_workspace:
+          root: .
+          paths:
+            - "examples"
 
   release:
     executor: node
@@ -76,7 +95,11 @@ workflows:
           requires:
             - prepare
 
-      - test:
+      - test_unit:
+          requires:
+            - build
+
+      - examples:
           requires:
             - build
 
@@ -84,7 +107,8 @@ workflows:
           requires:
             - prepare
             - build
-            - test
+            - examples
+            - test_unit
           filters:
             branches:
               only:
