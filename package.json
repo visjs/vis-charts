@@ -51,7 +51,7 @@
     "build:copy:vis.min.css.map": "shx cp \"./styles/vis-charts.min.css.map\" \"./dist/vis.min.css.map\"",
     "build:copy:vis.min.js": "shx cp \"./peer/umd/vis-charts.min.js\" \"./dist/vis.min.js\"",
     "build:copy:vis.min.js.map": "shx cp \"./peer/umd/vis-charts.min.js.map\" \"./dist/vis.min.js.map\"",
-    "build:rollup": "rollup --config rollup.build.js",
+    "build:rollup": "rollup --bundleConfigAsCjs --config rollup.build.js",
     "clean": "shx rm -rf \"./{dist,esnext,peer,standalone,styles}/*\"",
     "generate-examples-index": "generate-examples-index --config generate-examples-index.json",
     "postinstall": "opencollective postinstall || exit 0",
