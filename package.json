@@ -45,7 +45,7 @@
   },
   "scripts": {
     "build": "npm run \"build:rollup\" && npm run \"build:copy\"",
-    "build:copy": "shx mkdir -p \"./dist\" && npm run \"build:copy:*\"",
+    "build:copy": "shx mkdir -p \"./dist\" && npm run build:copy:images && npm run build:copy:vis.css && npm run build:copy:vis.css.map && npm run build:copy:vis.js && npm run build:copy:vis.js.map && npm run build:copy:vis.min.css && npm run build:copy:vis.min.css.map && npm run build:copy:vis.min.js && npm run build:copy:vis.min.js.map",
     "build:copy:images": "shx cp -r \"./legacy-files/*\" \"./dist/\"",
     "build:copy:vis.css": "shx cp \"./styles/vis-charts.css\" \"./dist/vis.css\"",
     "build:copy:vis.css.map": "shx cp \"./styles/vis-charts.css.map\" \"./dist/vis.css.map\"",
