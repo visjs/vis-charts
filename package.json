@@ -39,6 +39,10 @@
     "type": "opencollective",
     "url": "https://opencollective.com/visjs"
   },
+  "volta": {
+    "node": "21.7.3",
+    "npm": "11.4.2"
+  },
   "scripts": {
     "build": "npm run \"build:rollup\" && npm run \"build:copy\"",
     "build:copy": "shx mkdir -p \"./dist\" && npm run \"build:copy:*\"",
