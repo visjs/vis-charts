@@ -1,4 +1,4 @@
-import packageJSON from "./package.json";
+import packageJSON from "./package.json" with { type: "json" };
 import { generateRollupConfiguration } from "vis-dev-utils";
 
 // Note: This is used only for simplicity of maintenance. Only the "peer" build
@@ -9,5 +9,5 @@ export default generateRollupConfiguration({
   header: { name: "vis-charts" },
   libraryFilename: "vis-charts",
   entryPoints: "./src",
-  packageJSON
+  packageJSON,
 });

@@ -68,7 +68,7 @@ import * as util from "vis-util/esnext";
 export { util };
 defaultExport.util = util;
 
-import * as DOMutil from "./deprecated/DOMutil";
+import * as DOMutil from "./deprecated/DOMutil.js";
 export { DOMutil };
 defaultExport.DOMutil = DOMutil;
 
@@ -76,11 +76,11 @@ defaultExport.DOMutil = DOMutil;
  * Reexport bundled external libraries.
  */
 
-import * as moment from "./deprecated/moment";
+import * as moment from "./deprecated/moment.js";
 export { moment };
 defaultExport.moment = moment;
 
-import * as Hammer from "./deprecated/hammer";
+import * as Hammer from "./deprecated/hammer.js";
 export { Hammer };
 defaultExport.Hammer = Hammer;
 

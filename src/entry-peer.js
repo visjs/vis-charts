@@ -1,1 +1,1 @@
-export * from "./legacy-exports";
+export * from "./legacy-exports.js";
