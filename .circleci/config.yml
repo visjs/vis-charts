@@ -21,28 +21,29 @@ jobs:
       - run: npm ci
 
       - persist_to_workspace:
-          root: .
+          root: ..
           paths:
-            - "*"
+            - ".cache"
+            - "repo"
 
   build:
     executor: node
 
     steps:
       - attach_workspace:
-          at: .
+          at: ..
 
       - run: npm run build
 
       - persist_to_workspace:
-          root: .
+          root: ..
           paths:
-            - declarations
-            - dist
-            - esnext
-            - peer
-            - standalone
-            - styles
+            - "repo/declarations"
+            - "repo/dist"
+            - "repo/esnext"
+            - "repo/peer"
+            - "repo/standalone"
+            - "repo/styles"
 
   test_unit:
     executor: node
@@ -58,21 +59,21 @@ jobs:
 
     steps:
       - attach_workspace:
-          at: .
+          at: ..
 
       - run: npm run generate-examples-index
 
       - persist_to_workspace:
-          root: .
+          root: ..
           paths:
-            - "examples"
+            - "repo/examples"
 
   release:
     executor: node
 
     steps:
       - attach_workspace:
-          at: .
+          at: ..
 
       - run:
           name: Prepare NPM
