@@ -21,7 +21,49 @@
         "vis-util"
       ],
       "matchDepTypes": ["devDependencies"],
-      "semanticCommitType": "fix"
+      "matchUpdateTypes": ["patch"],
+      "semanticCommitType": "fix",
+      "automerge": true
+    },
+    {
+      "matchPackageNames": [
+        "@egjs/hammerjs",
+        "component-emitter",
+        "hammerjs",
+        "keycharm",
+        "moment",
+        "propagating-hammerjs",
+        "uuid",
+        "vis-data",
+        "vis-graph3d",
+        "vis-network",
+        "vis-timeline",
+        "vis-util"
+      ],
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["minor"],
+      "semanticCommitType": "feat",
+      "automerge": true
+    },
+    {
+      "matchPackageNames": [
+        "@egjs/hammerjs",
+        "component-emitter",
+        "hammerjs",
+        "keycharm",
+        "moment",
+        "propagating-hammerjs",
+        "uuid",
+        "vis-data",
+        "vis-graph3d",
+        "vis-network",
+        "vis-timeline",
+        "vis-util"
+      ],
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["major"],
+      "semanticCommitType": "feat",
+      "automerge": true
     }
   ]
 }
