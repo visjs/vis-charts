@@ -235,7 +235,7 @@
     "vis-dev-utils": "5.0.2",
     "vis-graph3d": "7.0.1",
     "vis-network": "10.0.1",
-    "vis-timeline": "8.1.0",
+    "vis-timeline": "8.1.1",
     "vis-util": "6.0.0"
   }
 }
