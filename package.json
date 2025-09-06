@@ -225,7 +225,7 @@
     "hammerjs": "2.0.8",
     "husky": "9.1.7",
     "keycharm": "0.4.0",
-    "mocha": "11.7.1",
+    "mocha": "11.7.2",
     "moment": "2.30.1",
     "propagating-hammerjs": "3.0.0",
     "shx": "0.4.0",
