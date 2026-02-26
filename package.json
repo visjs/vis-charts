@@ -197,7 +197,7 @@
   "volta": {
     "node": "24.14.0",
     "npm": "11.11.0",
-    "pnpm": "10.30.2"
+    "pnpm": "10.30.3"
   },
   "type": "module",
   "scripts": {
