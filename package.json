@@ -195,7 +195,7 @@
     "url": "https://opencollective.com/visjs"
   },
   "volta": {
-    "node": "24.14.1",
+    "node": "24.15.0",
     "npm": "11.12.1",
     "pnpm": "10.33.0"
   },
