@@ -1,10 +1,7 @@
 {
-  "extends": ["config:base"],
+  "extends": ["config:best-practices", ":pinOnlyDevDependencies"],
+  "dependencyDashboard": false,
   "packageRules": [
-    {
-      "updateTypes": ["minor", "patch", "pin", "digest"],
-      "automerge": true
-    },
     {
       "matchPackageNames": [
         "@egjs/hammerjs",
@@ -22,8 +19,7 @@
       ],
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["patch"],
-      "semanticCommitType": "fix",
-      "automerge": true
+      "semanticCommitType": "fix"
     },
     {
       "matchPackageNames": [
@@ -42,8 +38,7 @@
       ],
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["minor"],
-      "semanticCommitType": "feat",
-      "automerge": true
+      "semanticCommitType": "feat"
     },
     {
       "matchPackageNames": [
@@ -62,8 +57,17 @@
       ],
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["major"],
-      "semanticCommitType": "feat",
+      "semanticCommitType": "feat"
+    },
+
+    {
+      "updateTypes": ["major", "minor", "patch", "pin", "digest"],
       "automerge": true
+    },
+    {
+      "matchDepTypes": ["dependencies", "peerDependencies"],
+      "matchUpdateTypes": ["major"],
+      "automerge": false
     }
   ]
 }
