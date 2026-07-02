@@ -65,6 +65,7 @@
         "major",
         "minor",
         "patch",
+        "lockFileMaintenance",
         "pin",
         "digest",
         "pinDigest"
