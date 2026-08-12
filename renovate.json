@@ -10,7 +10,6 @@
       "matchPackageNames": [
         "@egjs/hammerjs",
         "component-emitter",
-        "hammerjs",
         "keycharm",
         "moment",
         "propagating-hammerjs",
@@ -29,7 +28,6 @@
       "matchPackageNames": [
         "@egjs/hammerjs",
         "component-emitter",
-        "hammerjs",
         "keycharm",
         "moment",
         "propagating-hammerjs",
@@ -48,7 +46,6 @@
       "matchPackageNames": [
         "@egjs/hammerjs",
         "component-emitter",
-        "hammerjs",
         "keycharm",
         "moment",
         "propagating-hammerjs",
