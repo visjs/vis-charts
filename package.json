@@ -232,5 +232,8 @@
     "vis-network": "10.1.4",
     "vis-timeline": "8.5.6",
     "vis-util": "6.0.3"
+  },
+  "allowScripts": {
+    "puppeteer": true
   }
 }
